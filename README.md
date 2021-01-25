@@ -17,4 +17,4 @@ Seguindo layout proposto
 ### Executando Frontend via CLI
 
 `cd operadoras/`
-`npm i npm run dev`
+`npm i && npm run dev`
