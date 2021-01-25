@@ -3,7 +3,13 @@ $body-bg: #e5e5e5;
 
 // Typography
 $font-family-sans-serif: "Roboto", sans-serif;
-$font-size-base: 0.9rem;
+$font-size: (
+  small: 12px,
+  base: 16px,
+  select: 20px,
+  big: 24px,
+  title: 28px
+);
 $line-height-base: 1.6;
 
 // Colors
@@ -11,9 +17,21 @@ $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
-$red: #e3342f;
+$red: #f45959;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
+$green: #20e47b;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$text-color: #444444;
+
+// Alpha Colors
+$box-shadow-button: rgba(0, 0, 0, 0.25);
+
+// FONT-WEIGHTS
+$font-weight: (
+  light: 300,
+  regular: 400,
+  normal: 500,
+  bold: 700
+);
