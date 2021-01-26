@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('status/', [App\Http\Controllers\StatusController::class, 'index']);
+
+Route::get('operadoras/', [App\Http\Controllers\OperadoraController::class, 'index']);
+Route::post('operadoras/nova', [App\Http\Controllers\OperadoraController::class, 'store']);
+Route::put('operadoras/{id}/atualizar', [App\Http\Controllers\OperadoraController::class, 'update']);
+Route::delete('operadoras/{id}/deletar', [App\Http\Controllers\OperadoraController::class, 'destroy']);
