@@ -10959,7 +10959,11 @@ a.text-dark:focus {
   font-size: 16px;
   padding: 8px;
   width: 36px;
+  height: 36px;
   font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .btn-actions.ok,

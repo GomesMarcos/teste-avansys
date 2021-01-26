@@ -11,10 +11,14 @@
 
 .btn-actions {
   color: $white;
-  font-size: map-get($font-size, "base");
+  font-size: map-get($font-size, 'base');
   padding: 8px;
   width: 36px;
-  font-weight: map-get($font-weight, "normal");
+  height: 36px;
+  font-weight: map-get($font-weight, 'normal');
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
   &.ok {
     background: $green;
