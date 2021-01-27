@@ -55,3 +55,16 @@ $box-shadow: (
     0px 19px 38px rgba(0, 0, 0, 0.3),
   ),
 );
+
+// Mixins
+@mixin icon-name($icon) {
+  mask-image: url('../icons/' + $icon + '.svg');
+}
+
+@mixin bg-color-with-dark-hover($color, $amount: 5%) {
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, $amount);
+  }
+}

@@ -7,6 +7,7 @@
       data-toggle="modal"
       :data-target="`#${id}`"
     >
+      <i :class="'icon ' + btnIcon"></i>
       {{ btnLabel }}
     </button>
 

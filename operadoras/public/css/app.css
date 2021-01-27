@@ -10945,6 +10945,38 @@ a.text-dark:focus {
   }
 }
 
+.icon {
+  width: 1rem;
+  height: 1rem;
+  transition: ease-in-out 0.3s all;
+  background-color: #444444;
+  padding: 1rem;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.icon.big {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon.cancel {
+  -webkit-mask-image: url(/images/cancel.svg?d765eeedb5df8f649d998eacc890acee);
+          mask-image: url(/images/cancel.svg?d765eeedb5df8f649d998eacc890acee);
+}
+
+.icon.config {
+  -webkit-mask-image: url(/images/config.svg?aa581f606fd16517da847c33bed1642f);
+          mask-image: url(/images/config.svg?aa581f606fd16517da847c33bed1642f);
+}
+
+.icon.trash {
+  -webkit-mask-image: url(/images/trash.svg?bbf782e79c260a7e886086445ac25339);
+          mask-image: url(/images/trash.svg?bbf782e79c260a7e886086445ac25339);
+}
+
 .card {
   background-color: #fffefe;
   padding: 48px;
@@ -11055,7 +11087,7 @@ a.text-dark:focus {
 }
 
 .btn-new {
-  background: #ebe6e6;
+  background-color: #eeeeee;
   border: 1px solid #fff;
   box-sizing: border-box;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -11065,11 +11097,19 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+.btn-new:hover {
+  background-color: #e1e1e1;
+}
+
 .btn-actions {
-  background: #eeeeee;
+  background-color: #eeeeee;
   border: 1px solid #cccccc;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.btn-actions:hover {
+  background-color: #e1e1e1;
 }
 
 .btn-actions-form {
@@ -11086,11 +11126,16 @@ a.text-dark:focus {
 
 .btn-actions-form.ok,
 .btn-actions-form.cancel {
-  background: #20e47b;
+  background-color: #20e47b;
   border: 1px solid #fff;
   box-sizing: border-box;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+}
+
+.btn-actions-form.ok:hover,
+.btn-actions-form.cancel:hover {
+  background-color: #19d16f;
 }
 
 .btn-actions-form.cancel {

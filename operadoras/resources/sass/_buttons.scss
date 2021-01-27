@@ -1,5 +1,5 @@
 .btn-new {
-  background: #ebe6e6;
+  @include bg-color-with-dark-hover($btn-bg);
   border: 1px solid $white;
   box-sizing: border-box;
   box-shadow: map-get($box-shadow, 'button');
@@ -10,7 +10,8 @@
 }
 
 .btn-actions {
-  background: $btn-bg;
+  @include bg-color-with-dark-hover($btn-bg);
+  // background: $btn-bg;
   border: 1px solid $btn-border;
   box-sizing: border-box;
   border-radius: 4px;
@@ -27,7 +28,8 @@
     display: flex;
 
     &.ok {
-      background: $green;
+      @include bg-color-with-dark-hover($green);
+      // background: $green;
       border: 1px solid $white;
       box-sizing: border-box;
       box-shadow: map-get($box-shadow, 'button');

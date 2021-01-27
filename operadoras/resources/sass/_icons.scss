@@ -1,0 +1,26 @@
+.icon {
+  width: 1rem;
+  height: 1rem;
+  transition: ease-in-out 0.3s all;
+  background-color: $text-color;
+  padding: 1rem;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  &.big {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &.cancel {
+    @include icon-name('cancel');
+  }
+
+  &.config {
+    @include icon-name('config');
+  }
+
+  &.trash {
+    @include icon-name('trash');
+  }
+}
