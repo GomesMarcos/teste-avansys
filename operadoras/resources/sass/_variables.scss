@@ -1,16 +1,27 @@
+// Fonts
+// @import
+
 // Body
 $body-bg: #e5e5e5;
 
 // Typography
-$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-sans-serif: 'Roboto', sans-serif;
 $font-size: (
   small: 12px,
   base: 16px,
   select: 20px,
   big: 24px,
-  title: 28px
+  title: 28px,
 );
 $line-height-base: 1.6;
+
+// FONT-WEIGHTS
+$font-weight: (
+  light: 300,
+  regular: 400,
+  normal: 500,
+  bold: 700,
+);
 
 // Colors
 $blue: #3490dc;
@@ -24,14 +35,17 @@ $green: #20e47b;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $text-color: #444444;
+$border-color: (
+  card: #8a8a8a,
+  form: #a2a0a0,
+);
+$tr-color: (
+  even: #e9edf4,
+  odd: #f7f7f8,
+);
 
 // Alpha Colors
-$box-shadow-button: rgba(0, 0, 0, 0.25);
-
-// FONT-WEIGHTS
-$font-weight: (
-  light: 300,
-  regular: 400,
-  normal: 500,
-  bold: 700
+$box-shadow: (
+  button: 0px 1px 4px rgba(0, 0, 0, 0.25),
+  card: 0px 3px 14px rgba(0, 0, 0, 0.08),
 );

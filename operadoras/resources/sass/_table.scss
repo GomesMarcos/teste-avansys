@@ -1,0 +1,20 @@
+.table {
+  th {
+    background-color: none;
+  }
+
+  tr {
+    background-color: map-get($tr-color, 'odd');
+
+    &:first-child {
+      background-color: $white;
+    }
+    &:nth-child(even) {
+      background-color: map-get($tr-color, 'even');
+    }
+  }
+
+  td {
+    border: 1px solid $white;
+  }
+}

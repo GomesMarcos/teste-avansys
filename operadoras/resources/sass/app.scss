@@ -1,17 +1,26 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 // Variables
-@import "variables";
+@import 'variables';
 
-@import "buttons";
+// Custom
+@import 'cards';
+@import 'table';
+@import 'select';
+@import 'buttons';
 
 body {
   width: 100vw;
   height: 100vh;
   background-color: $body-bg;
   color: $text-color;
+}
+
+.title {
+  font-size: map-get($font-size, 'title');
+
+  &-wrapper {
+    border-bottom: 1px solid $text-color;
+  }
 }

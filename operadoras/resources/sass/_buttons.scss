@@ -2,11 +2,11 @@
   background: #ebe6e6;
   border: 1px solid $white;
   box-sizing: border-box;
-  box-shadow: 0px 1px 6px $box-shadow-button;
+  box-shadow: map-get($box-shadow, 'button');
   border-radius: 40px;
   padding: 8px 24px;
-
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .btn-actions {
@@ -24,11 +24,14 @@
     background: $green;
     border: 1px solid $white;
     box-sizing: border-box;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: map-get($box-shadow, 'button');
     border-radius: 30px;
   }
   &.cancel {
     @extend .ok;
     background-color: $red;
+    background-image: url(../icons/cancel.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
