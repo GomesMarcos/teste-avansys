@@ -20,7 +20,11 @@ window.Vue = require('vue').default
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('operadoras-component', require('./components/OperadorasComponent.vue').default)
-Vue.component('select-component', require('./components/CustomSelectComponent.vue').default)
+Vue.component('select-component', require('./components/SelectComponent.vue').default)
+Vue.component(
+  'confirmation-component',
+  require('./components/ModalConfirmacaoComponent.vue').default,
+)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

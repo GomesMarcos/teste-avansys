@@ -29,8 +29,8 @@ $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
 $red: #f45959;
-$orange: #f6993f;
-$yellow: #ffed4a;
+$orange: #f39c12;
+$yellow: #fff9c3;
 $green: #20e47b;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
@@ -43,9 +43,15 @@ $tr-color: (
   even: #e9edf4,
   odd: #f7f7f8,
 );
+$btn-bg: #eeeeee;
+$btn-border: #cccccc;
 
 // Alpha Colors
 $box-shadow: (
   button: 0px 1px 4px rgba(0, 0, 0, 0.25),
   card: 0px 3px 14px rgba(0, 0, 0, 0.08),
+  modal: (
+    0px 15px 12px rgba(0, 0, 0, 0.22),
+    0px 19px 38px rgba(0, 0, 0, 0.3),
+  ),
 );

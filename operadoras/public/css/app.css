@@ -6310,7 +6310,8 @@ a.close.disabled {
   opacity: 0.5;
 }
 
-.modal-header {
+.modal-header,
+.modal-footer {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -6320,7 +6321,8 @@ a.close.disabled {
   border-top-right-radius: calc(0.3rem - 1px);
 }
 
-.modal-header .close {
+.modal-header .close,
+.modal-footer .close {
   padding: 1rem 1rem;
   margin: -1rem -1rem -1rem auto;
 }
@@ -11064,6 +11066,13 @@ a.text-dark:focus {
 }
 
 .btn-actions {
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.btn-actions-form {
   color: #fff;
   font-size: 16px;
   padding: 8px;
@@ -11075,8 +11084,8 @@ a.text-dark:focus {
   display: flex;
 }
 
-.btn-actions.ok,
-.btn-actions.cancel {
+.btn-actions-form.ok,
+.btn-actions-form.cancel {
   background: #20e47b;
   border: 1px solid #fff;
   box-sizing: border-box;
@@ -11084,11 +11093,88 @@ a.text-dark:focus {
   border-radius: 30px;
 }
 
-.btn-actions.cancel {
+.btn-actions-form.cancel {
   background-color: #f45959;
   background-image: url(/images/cancel.svg?d765eeedb5df8f649d998eacc890acee);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.btn-actions-modal {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 40px;
+  background-color: #eeeeee;
+  font-weight: 300;
+  margin: 0 8px;
+}
+
+.btn-actions-modal:hover {
+  background-color: #e1e1e1;
+}
+
+.btn-actions-modal.confirm {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.btn-actions-modal.confirm:hover {
+  background-color: #e08e0b;
+}
+
+.modal {
+  color: #f39c12;
+}
+
+.modal-dialog {
+  width: 100vw;
+  margin: 25vh auto;
+  position: relative;
+  height: 100vh;
+}
+
+.modal-content {
+  background-color: #fff9c3;
+  box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.22), 0px 19px 38px rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  padding: 32px;
+  width: 640px;
+  border: 1.5px solid #f39c12;
+}
+
+.modal-header,
+.modal-footer {
+  align-items: center;
+  font-weight: 500;
+  border: none;
+  text-transform: uppercase;
+}
+
+.modal-header .close,
+.modal-footer .close {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.modal-header .close span,
+.modal-footer .close span {
+  font-weight: 300;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-footer .btn {
+  width: 35%;
+  text-transform: uppercase;
+  padding: 12px 24px;
 }
 
 body {

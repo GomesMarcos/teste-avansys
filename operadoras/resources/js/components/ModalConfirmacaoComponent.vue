@@ -1,14 +1,19 @@
 <template>
   <div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-      Launch
+    <button
+      type="button"
+      :class="'btn btn-actions ' + btnIcon"
+      data-toggle="modal"
+      :data-target="`#${id}`"
+    >
+      {{ btnLabel }}
     </button>
 
     <!-- Modal -->
     <div
       class="modal fade"
-      id="modelId"
+      :id="id"
       tabindex="-1"
       role="dialog"
       aria-labelledby="modelTitleId"
@@ -17,17 +22,17 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">{{ title }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <div class="container-fluid"> Add rows here </div>
+            <div class="container-fluid"> {{ message }} </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-actions-modal" data-dismiss="modal">não</button>
+            <button type="button" class="btn btn-actions-modal confirm">sim</button>
           </div>
         </div>
       </div>
@@ -36,5 +41,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    id: String,
+    title: String,
+    message: String,
+    action: String,
+    btnLabel: String,
+    btnIcon: String,
+  },
+}
 </script>

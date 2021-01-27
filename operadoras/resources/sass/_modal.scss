@@ -1,0 +1,53 @@
+.modal {
+  color: $orange;
+
+  &-dialog {
+    width: 100vw;
+    margin: 25vh auto;
+    position: relative;
+    height: 100vh;
+  }
+
+  &-content {
+    background-color: $yellow;
+    box-shadow: map-get($box-shadow, 'modal');
+    border-radius: 9px;
+    padding: 32px;
+    width: 640px;
+    border: 1.5px solid $orange;
+  }
+
+  &-header {
+    align-items: center;
+    font-weight: map-get($font-weight, 'normal');
+    border: none;
+    text-transform: uppercase;
+
+    .close {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      // top: 1rem;
+      top: 0;
+      // right: 1rem;
+      right: 0;
+      width: 48px;
+      height: 48px;
+
+      span {
+        font-weight: map-get($font-weight, 'light');
+      }
+    }
+  }
+
+  &-footer {
+    @extend .modal-header;
+    justify-content: center;
+
+    .btn {
+      width: 35%;
+      text-transform: uppercase;
+      padding: 12px 24px;
+    }
+  }
+}

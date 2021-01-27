@@ -6,7 +6,7 @@
     <div class="card card-table">
       <div class="card-table-row">
         <!-- SELECTS -->
-        <custom-select-component
+        <select-component
           :filter="operadora"
           :filterList="operadoras"
           selectTagId="optionsOperadoras"
@@ -14,23 +14,24 @@
           filterNameAll="Todas"
           @updatedFilter="operadora = $event"
           @updatedFilterList="operadoras = $event"
-        ></custom-select-component>
+        ></select-component>
 
-        <custom-select-component
+        <select-component
+          select-component
           :filter="status"
           :filterList="statuses"
           selectTagId="optionsStatuses"
           labelTagText="STATUS"
           filterNameAll="Todos"
           @updatedFilter="status = $event"
-        ></custom-select-component>
+        ></select-component>
       </div>
 
       <div class="card-table-row">
         <button class="btn btn-new mt-5 mb-4">+ novo</button>
       </div>
 
-      <div class="cart-table-row">
+      <div class="cart-table-row d-flex align-items-center mb-3">
         <div class="form-check mr-3">
           <label class="form-check-label">
             <input
@@ -43,6 +44,26 @@
             Marcar todos
           </label>
         </div>
+        <div class="mr-3">
+          <modal-confirmacao-component
+            title="TEM CERTEZA QUE DESEJA EXCLUIR ESTE ITEM?"
+            message="Ao excluir este item você só poderá consulta-lo, mas não poderá mais reativar-lo."
+            action="delete"
+            btnLabel="EXCLUIR"
+            btnIcon="trash"
+            id="asd"
+          ></modal-confirmacao-component>
+        </div>
+        <div class="mr-3">
+          <modal-confirmacao-component
+            title="TEM CERTEZA QUE DESEJA DESATIVAr ESTE ITEM?"
+            message="Ao desativar este item você só poderá consulta-lo, mas não poderá mais reativar-lo."
+            action="changeStatus"
+            btnLabel="HABILITAR E DESABILITAR"
+            btnIcon="config"
+            id="qwe"
+          ></modal-confirmacao-component>
+        </div>
       </div>
 
       <!-- FORM -->
@@ -54,8 +75,8 @@
           <tbody>
             <tr>
               <td class="table-actions">
-                <button type="submit" class="btn btn-actions ok">ok</button>
-                <button class="btn btn-actions cancel" @click.prevent="resetForm">
+                <button type="submit" class="btn btn-actions-form ok">ok</button>
+                <button class="btn btn-actions-form cancel" @click.prevent="resetForm">
                 </button>
               </td>
               <td>
@@ -119,9 +140,11 @@
 </template>
 
 <script>
-import CustomSelectComponent from './CustomSelectComponent.vue'
+import SelectComponent from './SelectComponent.vue'
+import ModalConfirmacaoComponent from './ModalConfirmacaoComponent.vue'
+
 export default {
-  components: { CustomSelectComponent },
+  components: { SelectComponent, ModalConfirmacaoComponent },
   data() {
     return {
       operadoras: [],
