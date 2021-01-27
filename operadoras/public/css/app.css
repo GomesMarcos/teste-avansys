@@ -10995,16 +10995,22 @@ a.text-dark:focus {
   flex-direction: row;
 }
 
+.table {
+  font-weight: 300;
+}
+
+.table thead tr {
+  background-color: #fff;
+}
+
 .table th {
+  font-weight: inherit;
   background-color: none;
+  border: none !important;
 }
 
 .table tr {
   background-color: #f7f7f8;
-}
-
-.table tr:first-child {
-  background-color: #fff;
 }
 
 .table tr:nth-child(even) {
@@ -11106,6 +11112,12 @@ a.text-dark:focus {
   border: 1px solid #cccccc;
   box-sizing: border-box;
   border-radius: 4px;
+  font-size: 12px;
+  max-width: 143px;
+  max-height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-actions:hover {

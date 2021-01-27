@@ -37827,8 +37827,9 @@ var render = function() {
         }
       },
       [
-        _c("i", { class: "icon " + _vm.btnIcon }),
-        _vm._v("\n    " + _vm._s(_vm.btnLabel) + "\n  ")
+        _c("i", { class: "mr-2 icon " + _vm.btnIcon }),
+        _vm._v(" "),
+        _c("span", [_vm._v(_vm._s(_vm.btnLabel))])
       ]
     ),
     _vm._v(" "),

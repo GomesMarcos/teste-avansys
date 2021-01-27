@@ -1,14 +1,18 @@
 .table {
+  font-weight: map-get($font-weight, 'light');
+
+  thead tr {
+    background-color: $white;
+  }
   th {
+    font-weight: inherit;
     background-color: none;
+    border: none !important;
   }
 
   tr {
     background-color: map-get($tr-color, 'odd');
 
-    &:first-child {
-      background-color: $white;
-    }
     &:nth-child(even) {
       background-color: map-get($tr-color, 'even');
     }
